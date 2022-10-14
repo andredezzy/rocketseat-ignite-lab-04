@@ -14,8 +14,12 @@ module.exports = {
     "builder": "@storybook/builder-vite"
   },
   "features": {
-    "storyStoreV7": true
+    "storyStoreV7": true,
+    "interactionDebugger": true,
   },
+  "staticDir": [
+    "../public"
+  ],
   viteFinal: async (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/rocketseat-ignite-lab-04/';
